@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+  <h1>Regras do Jogo</h1>
+
+  <div>
+    <h2>Progressão no Jogo</h2>
+
+  <p>Alinhar <strong>3 ou mais joias iguais na horizontal</strong> faz com que sejam eliminadas do tabuleiro.</p>
