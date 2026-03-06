@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 
 <body>
 
@@ -8,5 +8,30 @@
 
   <div>
     <h2>Progressão no Jogo</h2>
-
   <p>Alinhar <strong>3 ou mais joias iguais na horizontal</strong> faz com que sejam eliminadas do tabuleiro.</p>
+  <p>As joias que estavam acima das eliminadas descem no tabuleiro para ocupar os espaços vazios.</p>
+  <p>Novas joias aparecem no topo do tabuleiro, escolhidas aleatoriamente.</p>
+  </div>
+
+  <div>
+   <h2>Pontuação</h2>
+    <p>Pontos obtidos por alinhamento de <strong>n ≥ 3 joias iguais consecutivas</strong>:</p>
+    <p><strong>10 × (n − 2)</strong></p>
+    <ul>
+      <li>3 joias → 10 pontos</li>
+      <li>4 joias → 20 pontos</li>
+      <li>5 joias → 30 pontos</li>
+    </ul>
+  </div>
+
+   <div>
+    <h2>Fim do Jogo</h2>
+    <h3>Vitória</h3>
+    <p>O jogador ganha se atingir o objetivo de eliminar <strong>20 ou mais joias</strong> do tabuleiro.</p>
+    <h3>Derrota</h3>
+    <p>O jogador perde se ficar sem jogadas possíveis.</p>
+  </div>
+
+</body>
+
+</html>
