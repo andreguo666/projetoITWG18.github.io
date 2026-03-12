@@ -1,1 +1,7 @@
-
+body {
+    background-color: #0a0e1a;
+    color: #c8d6e5;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
