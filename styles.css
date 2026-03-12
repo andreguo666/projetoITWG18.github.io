@@ -1,7 +1,9 @@
 body {
-    background-color: #0a0e1a;
-    color: #c8d6e5;
+    background-image:url(background.jpg);
+    color: #dcf42e;
     font-family: "Courier New", Courier, monospace;
     margin: 0;
-    padding: 500px;
+    padding: 20px;
+    padding-top: 100px;
+    text-align: center;
 }
