@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: aliceblue;
+    background-image:url(8-Bit-GIFs-Japan-Quite-Road.gif);
+    background-size: 100%;
     color: #000000;
     font-family: "Courier New", Courier, monospace;
     min-height: 100vh;
@@ -16,7 +17,7 @@ body {
 
 header {
     width: 100%;
-    height: 150px;
+    height: 100px;
     background-color: rgb(129, 199, 249);
     border-bottom: 2px solid #000000;
     
@@ -74,6 +75,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: rgb(129, 199, 249);
+    height: 10px;
     color: #000000;
     font-weight: bold;
     border-top: 2px solid #000000;
