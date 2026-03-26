@@ -1,0 +1,107 @@
+/* =========================================
+登录页面
+   ========================================= */
+
+
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.caixa-login {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 30px 40px;
+    width: 380px; 
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.caixa-login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(129, 199, 249);
+    padding-bottom: 10px;
+}
+
+
+.grupo-input {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.grupo-input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+.grupo-input input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: rgb(129, 199, 249);
+    background-color: #fff;
+}
+
+
+.acoes-login {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.link-esqueceu {
+    display: inline-block;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.link-esqueceu:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.botoes-container {
+    display: flex;
+    gap: 15px;
+}
+
+.botoes-container a {
+    flex: 1;
+    text-decoration: none;
+}
+
+.btn-acao {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: rgb(129, 199, 249);
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-acao:hover {
+    background-color: #000000;
+    color: #ffffff;
+}

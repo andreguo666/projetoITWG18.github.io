@@ -1,0 +1,14 @@
+/* =========================================
+ 这个是给historia那一页的
+   ========================================= */
+
+.texto-historia {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.texto-historia p {
+    margin-bottom: 10px; 
+}

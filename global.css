@@ -1,0 +1,114 @@
+/* =========================================
+这个css是给所有global，基本算是通用吧，包含了背景 头部 footer还有框架按钮
+（este é para background head footer e butoes)
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(8-Bit-GIFs-Japan-Quite-Road.gif);
+    background-size: 100%;
+    color: #000000;
+    font-family: "Courier New", Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(129, 199, 249);
+    border-bottom: 2px solid #000000;
+    display: flex; /* 排版*/
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+main {
+    /*老师要求的固定尺寸*/
+    width: 800px;
+    height: 700px; 
+    
+    /* 居中*/
+    margin: 40px auto;
+    position: relative;
+    
+    overflow-y: auto; 
+    overflow-x: hidden;
+    
+    background-color: rgba(248, 230, 230, 0.85);
+    padding: 50px 40px;
+    border: 3px solid #000000;
+    border-radius: 12px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(129, 199, 249);
+    height: 10px;
+    color: #000000;
+    font-weight: bold;
+    border-top: 2px solid #000000;
+    width: 100%;
+    margin-top: auto;
+}
+
+/*这下面是基本通用的组件 */
+
+.menu-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 25px;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.menu-btn {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 2px solid #000000; 
+    background-color: #ffffff;
+    transition: all 0.3s ease; /* 放大的动画 */
+}
+
+.menu-btn:hover {
+    background-color: #000000; /* 鼠标的悬停效果*/
+    color: #ffffff;
+}
+
+.btn-voltar {
+    position: absolute; /* 返回按钮定位*/
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #000000;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: rgb(129, 199, 249);
+    color: #ffffff;
+}
