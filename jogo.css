@@ -114,7 +114,7 @@
 /* 下面来设定宝石的样子，就跟我们上周说的一样 鼠标放上去动起来的gif和jpg */
 
 .tipo-1 {
-    background-image: url(''); 
+    background-image: url('flowers/flowerblue1.png'); 
     background-color: transparent;
 }
 .tipo-1:hover {
@@ -123,7 +123,7 @@
 
 
 .tipo-2 {
-    background-image: url('');
+    background-image: url('flowers/floweryellow1.png');
     background-color: transparent;
 }
 .tipo-2:hover {
@@ -131,19 +131,20 @@
 }
 
 .tipo-3 {
-    background-image: url('');
+    background-image: url('flowers/flowerpink1.png');
     background-color: transparent;
 }
 .tipo-3:hover {
-    background-image: url('');
+    background-image: url('flowers/flower_sway.gif');
+    background-size:100px 100px;
 }
 
-.tipo-4 { background-image: url('');
+.tipo-4 { background-image: url('flowers/flowerred1.png');
      background-color: transparent;
 }
 .tipo-4:hover { background-image: url(''); }
 
-.tipo-5 { background-image: url('');
+.tipo-5 { background-image: url('flowers/flowerwhite1.png');
      background-color: transparent;
 }
 .tipo-5:hover { background-image: url(''); }
