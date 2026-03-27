@@ -44,7 +44,7 @@ main {
     margin: 40px auto;
     position: relative;
     
-    overflow-y: auto; 
+    overflow-y: hidden; 
     overflow-x: hidden;
     
     background-color: rgba(248, 230, 230, 0.85);

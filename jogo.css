@@ -111,8 +111,39 @@
     border-color: #fff;
 }
 
-.tipo-1 {background-image: url('bejeweled.jpg');}
-.tipo-2 { background-color: blue; /* background-image: url(''); */ }
-.tipo-3 { background-color: green; /* background-image: url(''); */ }
-.tipo-4 { background-color: yellow; /* background-image: url(''); */ }
-.tipo-5 { background-color: purple; /* background-image: url(''); */ }
+/* 下面来设定宝石的样子，就跟我们上周说的一样 鼠标放上去动起来的gif和jpg */
+
+.tipo-1 {
+    background-image: url(''); 
+    background-color: transparent;
+}
+.tipo-1:hover {
+    background-image: url('');
+}
+
+
+.tipo-2 {
+    background-image: url('');
+    background-color: transparent;
+}
+.tipo-2:hover {
+    background-image: url('');
+}
+
+.tipo-3 {
+    background-image: url('');
+    background-color: transparent;
+}
+.tipo-3:hover {
+    background-image: url('');
+}
+
+.tipo-4 { background-image: url('');
+     background-color: transparent;
+}
+.tipo-4:hover { background-image: url(''); }
+
+.tipo-5 { background-image: url('');
+     background-color: transparent;
+}
+.tipo-5:hover { background-image: url(''); }
