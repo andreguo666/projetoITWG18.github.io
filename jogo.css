@@ -118,16 +118,17 @@
     background-color: transparent;
 }
 .tipo-1:hover {
-    background-image: url('');
+    background-image: url('flowers/flower_blue_sway.gif');
+    background-size:100px 100px;
 }
-
 
 .tipo-2 {
     background-image: url('flowers/floweryellow1.png');
     background-color: transparent;
 }
 .tipo-2:hover {
-    background-image: url('');
+    background-image: url('flowers/flower_yellow_sway.gif');
+    background-size:100px 100px;
 }
 
 .tipo-3 {
@@ -135,16 +136,22 @@
     background-color: transparent;
 }
 .tipo-3:hover {
-    background-image: url('flowers/flower_sway.gif');
+    background-image: url('flowers/flower_swaypink.gif');
     background-size:100px 100px;
 }
 
 .tipo-4 { background-image: url('flowers/flowerred1.png');
-     background-color: transparent;
+    background-color: transparent;
 }
-.tipo-4:hover { background-image: url(''); }
+.tipo-4:hover { 
+    background-image: url('flowers/flower_red_sway.gif');
+    background-size:100px 100px;
+}
 
 .tipo-5 { background-image: url('flowers/flowerwhite1.png');
-     background-color: transparent;
+    background-color: transparent;
 }
-.tipo-5:hover { background-image: url(''); }
+.tipo-5:hover { 
+    background-image: url('flowers/flower_white_sway.gif');
+    background-size:100px 100px;
+}
