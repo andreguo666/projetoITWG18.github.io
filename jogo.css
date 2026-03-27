@@ -5,7 +5,8 @@
 
 .fundo-jogo {
 
-    background-image: url();/*放一张新背景*/
+    background-image: url('imagens/background2.gif');
+    background-size: 100%;
     background-color: #1a1a2e;
     background-size: cover;
     background-position: center;
