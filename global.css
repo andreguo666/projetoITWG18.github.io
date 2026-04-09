@@ -22,7 +22,7 @@ body {
 header {
     width: 100%;
     height: 100px;
-    background-color: rgb(129, 199, 249);
+    background-color: rgba(129, 199, 249, 0.5);
     border-bottom: 2px solid #000000;
     display: flex; /* 排版*/
     align-items: center;
@@ -57,7 +57,7 @@ main {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgb(129, 199, 249);
+    background-color: rgba(129, 199, 249, 0.5);
     height: 10px;
     color: #000000;
     font-weight: bold;
@@ -111,4 +111,79 @@ footer {
 .btn-voltar:hover {
     background-color: rgb(129, 199, 249);
     color: #ffffff;
+}
+
+/*主页*/
+
+.titulo-boas-vindas {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px; 
+    text-transform: uppercase;
+    color: #000000;
+
+    text-shadow: 2px 2px 0px rgba(129, 199, 249, 0.5); 
+}
+
+
+/* =========================================
+  角落图片样式
+   ========================================= */
+
+main {
+    position: relative;
+    overflow: hidden; 
+}
+
+
+.main-corners {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 10; 
+}
+
+/*通用角落样式 */
+.main-corners .corner {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+.main-corners .top-left {
+    top: -90px;
+    left: -90px; 
+    background-image: url(flowers/flower_blue_sway.gif);
+}
+
+/* 右上角 */
+.main-corners .top-right {
+    top: -90px;
+    right: -90px; 
+    background-image: url(flowers/flower_mix_sway.gif);
+}
+
+/* 左下角 */
+.main-corners .bottom-left {
+    bottom: -90px;
+    left: -90px;
+    background-image: url(flowers/flower_red_sway.gif);
+}
+
+/* 右下角 */
+.main-corners .bottom-right {
+    bottom: -90px;
+    right: -90px;
+    background-image: url(flowers/flower_swaypink.gif);
 }

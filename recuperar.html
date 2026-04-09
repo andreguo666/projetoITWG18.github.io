@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt"> <head>
+    <meta charset="UTF-8">
+    <title>Recuperar Palavra-passe - Bejeweled</title>
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="recuperar.css">
+</head>
+<body>
+    
+    <header>
+        <img src="imagens/bejeweled.jpg" alt="bejeweled logo" width="100" height="100">
+        <h1>Bejeweled</h1>
+    </header>
+
+    <main class="main-recuperar">
+        
+        <a href="login.html" class="btn-voltar">Voltar</a>
+
+        <form class="caixa-recuperar" action="#" method="POST">
+            <h2>Recuperar</h2>
+            <p class="subtitulo">Preenche os teus dados para redefinir a palavra-passe.</p>
+
+            <div class="grupo-input">
+                <label for="username">Username </label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="codigo">Verification Code </label>
+                <div class="linha-codigo">
+                    <input type="text" id="codigo" name="codigo" placeholder="Ex: 123456" required>
+                    <button type="button" class="btn-codigo">Get Code</button>
+                </div>
+            </div>
+
+            <div class="grupo-input">
+                <label for="nova-senha">New Password </label>
+                <input type="password" id="nova-senha" name="nova_senha" required>
+            </div>
+
+            <div class="acoes-recuperar">
+                <button type="submit" class="btn-acao">Reset Password </button>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>ITW PL G18 2026</p>
+    </footer>
+
+</body>
+</html>

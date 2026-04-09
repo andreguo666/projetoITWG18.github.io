@@ -1,0 +1,122 @@
+/* =========================================
+   recuperar
+   ========================================= */
+
+/* 居中 */
+.main-recuperar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 找回密码的方框  */
+.caixa-recuperar {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 25px 40px;
+    width: 450px; /* 稍微宽一点，为了装下验证码按钮 */
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.caixa-recuperar h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(129, 199, 249);
+    padding-bottom: 10px;
+}
+
+/* 输入框组排版*/
+.grupo-input {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.grupo-input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+/* 输入框样式 */
+.grupo-input input[type="text"],
+.grupo-input input[type="email"],
+.grupo-input input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: rgb(129, 199, 249);
+    background-color: #fff;
+}
+
+/* 验证码行的特殊 Flexbox 排版 */
+.linha-codigo {
+    display: flex; /* 弹性布局 */
+    gap: 10px; /* 间距 */
+}
+
+/* 验证码输入框占据剩余空间 */
+.linha-codigo input {
+    flex: 1; 
+}
+
+/* 获取验证码的按钮 */
+.btn-codigo {
+    padding: 0 15px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: inherit;
+}
+
+.btn-codigo:hover {
+    background-color: rgb(129, 199, 249);
+    color: #000;
+}
+
+/* 底部重置按钮区域 */
+.acoes-recuperar {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.btn-acao {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: rgb(129, 199, 249);
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-acao:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
