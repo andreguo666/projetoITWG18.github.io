@@ -37,8 +37,11 @@ header h1 {
 
 main {
     /*老师要求的固定尺寸*/
-    width: 800px;
-    height: 700px; 
+    width: 90%;
+    max-width: 800px;
+
+    height:auto; 
+    max-height: 700px;
     
     /* 居中*/
     margin: 40px auto;
@@ -178,7 +181,7 @@ main {
 .main-corners .bottom-left {
     bottom: -90px;
     left: -90px;
-    background-image: url(flowers/flower_red_sway.gif);
+    background-image: url(../flowers/flower_red_sway.gif);
 }
 
 /* 右下角 */
