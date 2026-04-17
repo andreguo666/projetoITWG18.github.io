@@ -187,6 +187,8 @@
         align-items: center; /* 确保计分板和棋盘整体居中对齐 */
         gap: 20px; /* 缩小它们之间的上下间距 */
         margin-top: 20px; /* 缩小顶部的留白 */
+        max-height: none;/*解锁global里面的高度限制*/
+        overflow-y: visible;/*允许超出显示*/
     }
 
     /*计分板移动到上方，并让内部数据横向排列以节省空间 */
