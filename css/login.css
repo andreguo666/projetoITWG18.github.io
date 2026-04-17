@@ -1,107 +1,117 @@
 /* =========================================
 登录页面
    ========================================= */
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
 
-
+/*页面*/
 .main-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: flex; /* 开启弹性布局*/
+    justify-content: center; /* 水平居中  */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column; /* 让内部元素从上到下纵向排列 */
 }
 
-
+/*登录表单的小方框*/
 .caixa-login {
-    background-color: #ffffff;
+    background-color: #ffffff; /* 纯白底色*/
     border: 2px solid #000000;
-    border-radius: 8px;
-    padding: 30px 40px;
-    width: 380px; 
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px; /* 圆角  */
+    padding: 30px 40px; /* 上下 30px，左右 40px 的内边距 */
+    width: 380px; /* 固定宽度，比反馈框稍微窄一点更紧凑 */
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15); /* 右下角的硬阴影产生立体感 */
 }
 
+/* 登录标题  */
 .caixa-login h2 {
     text-align: center;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    border-bottom: 2px solid rgb(129, 199, 249);
+    text-transform: uppercase; /* 字母全部大写  */
+    border-bottom: 2px solid rgb(129, 199, 249); /* 蓝色下划线 */
     padding-bottom: 10px;
 }
 
-
+/*输入框组排版*/
 .grupo-input {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* 账号和密码框之间的间距 */
     text-align: left;
 }
 
+/* 文本标签 */
 .grupo-input label {
-    display: block;
+    display: block; /* 让标签独占一行，位于输入框正上方 */
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 14px;
 }
 
-
+/* 真实的输入框  */
 .grupo-input input {
-    width: 100%;
+    width: 100%; /* 填满整个组的宽度 */
     padding: 10px;
     border: 2px solid #000000;
     border-radius: 4px;
-    font-family: inherit;
-    font-size: 16px;
+    font-family: inherit; /* 继承全局的打字机字体 */
+    font-size: 16px; /* 16px 能防止手机浏览器点击时自动放大画面 */
     background-color: #f9f9f9;
 }
 
-
+/* 输入框聚焦时的特效  */
 .grupo-input input:focus {
-    outline: none;
-    border-color: rgb(129, 199, 249);
+    outline: none; /* 去除浏览器自带的蓝色边框 */
+    border-color: rgb(129, 199, 249); /* 换成游戏主题的蓝色边框 */
     background-color: #fff;
 }
 
-
+/*底部忘记密码和按钮区域  */
 .acoes-login {
     margin-top: 25px;
     text-align: center;
 }
 
+/* 忘记密码链接*/
 .link-esqueceu {
     display: inline-block;
     font-size: 13px;
     color: #555;
     margin-bottom: 15px;
-    text-decoration: none;
+    text-decoration: none; /* 去掉默认下划线 */
 }
 
 .link-esqueceu:hover {
     color: #000;
-    text-decoration: underline;
+    text-decoration: underline; /* 鼠标放上去才显示下划线  */
 }
 
+/* 包裹两个按钮的弹性容器  */
 .botoes-container {
-    display: flex;
-    gap: 15px;
+    display: flex; /* 开启弹性布局让按钮并排 */
+    gap: 15px; /* 两个按钮之间的缝隙 */
 }
 
+/* 针对带有超链接的按钮的特殊处理 */
 .botoes-container a {
-    flex: 1;
+    flex: 1; /* 让所有按钮平分剩余空间，宽度一模一样 */
     text-decoration: none;
 }
 
+/* 统一按钮样式  */
 .btn-acao {
-    width: 100%;/*hhhh*/
+    width: 100%; /* 填满标签宽度 */
     padding: 12px;
     font-size: 16px;
     font-weight: bold;
     color: #000000;
     background-color: rgb(129, 199, 249);
     border: 2px solid #000000;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    cursor: pointer; /* 鼠标悬停变小手 */
+    transition: all 0.3s ease; /* 0.3秒过渡动画 */
     text-transform: uppercase;
 }
 
+/* 按钮悬停变色 */
 .btn-acao:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000000; /* 背景变黑 */
+    color: #ffffff; /* 文字变白 */
 }

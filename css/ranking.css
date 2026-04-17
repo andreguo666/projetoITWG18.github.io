@@ -1,25 +1,30 @@
 /* =========================================
    ranking
    ========================================= */
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
 
+/*页面 */
 .titulo-pagina {
     text-align: center;
     margin-bottom: 20px;
     margin-top: -10px;
-    text-transform: uppercase;
+    text-transform: uppercase; /* 全部大写 */
     font-size: 28px;
 }
 
-/* 每一个游戏模式的区块 */
+/*每一个游戏模式的区块*/
 .seccao-modo {
     background-color: #ffffff;
     border: 2px solid #000000;
-    border-radius: 8px;
+    border-radius: 8px; /* 圆角 */
     padding: 15px;
     margin-bottom: 20px;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15); /* 阴影  */
 }
 
+/* 模式标题  */
 .seccao-modo h3 {
     margin-bottom: 10px;
     border-bottom: 2px solid rgb(129, 199, 249);
@@ -27,69 +32,73 @@
     color: #333;
 }
 
-/* 控制表格*/
+/*表格滑动控制*/
 .tabela-scroll {
-    max-height: 150px; /* 限制高度，超过这个高度就会出现滚动条 */
-    overflow-y: auto;  /* 垂直方向开启滑动 */
+    max-height: 150px; /* 限制最高只能有 150px */
+    overflow-y: auto;  /* 垂直方向超过高度自动开启滑动 */
     border: 1px solid #ccc;
 }
 
 /* 规范的表格样式 */
 .tabela-ranking {
     width: 100%; /* 表格占满整个滑动框 */
-    border-collapse: collapse; /* 让表格的边框合并*/
+    border-collapse: collapse; /* 让单元格的边框合并，避免出现难看的双线边框*/
     text-align: center;
 }
 
-/* 表头*/
+/* 表头 */
 .tabela-ranking th {
     background-color: rgb(129, 199, 249);
     color: #fff;
     padding: 10px;
-    position: sticky; /* 粘性定位 */
-    top: 0;
+    
+    position: sticky; /* 粘性定位：往下轻扫表格时，表头会像贴纸一样固定在最上面 */
+    top: 0; /* 固定在距离顶部 0 的位置 */
+    z-index: 5; /* 确保表头在滑动时压在数据的上方 */
     border-bottom: 2px solid #000;
 }
 
-/* 表格数据行 */
+/* 表格数据行/单元格 */
 .tabela-ranking td {
     padding: 8px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee; /* 每行下面加一条极淡的分隔线 */
 }
 
-/* 给奇数行加一点非常浅的背景色，方便阅读 */
+/* 给奇数行加一点非常浅的背景色 */
 .tabela-ranking tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
 }
 
-/* 鼠标悬停时的互动感 */
+/* 鼠标悬停在某一行时的互动感  */
 .tabela-ranking tbody tr:hover {
-    background-color: #e0f2fe;
+    background-color: #e0f2fe; /* 变成极浅的蓝色 */
 }
 
-/*前三名的专属高亮颜色 */
+/* 前三名的专属高亮颜色  */
+/* 注意：这里使用 !important 是为了强制覆盖上面的线背景色 */
+
 .ouro td {
-    background-color: #fffbeb !important;
+    background-color: #fffbeb !important; /* 黄金色底色*/
     font-weight: bold;
-    color: #b45309;
+    color: #b45309; 
 }
 
 .prata td {
-    background-color: #f8fafc !important;
+    background-color: #f8fafc !important; /* 白银色底色 */
     font-weight: bold;
     color: #475569; 
 }
 
 .bronze td {
-    background-color: #fef2f2 !important;
+    background-color: #fef2f2 !important; /* 青铜色底色 */
     font-weight: bold;
     color: #991b1b;
 }
 
-/* 预留给未来的模式 等以后的模式*/
+/* 预留给未来的模式区块*/
 .modo-bloqueado {
-    background-color: #f5f5f5;
-    opacity: 0.8; /* 稍微透明一点，表示未解锁 */
+    background-color: #f5f5f5; /* 灰色背景表示不可用 */
+    opacity: 0.8; /* 稍微透明一点，表示未解锁状态 */
 }
 
 .area-reservada {

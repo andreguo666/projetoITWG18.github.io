@@ -1,55 +1,61 @@
 /* =========================================
    recuperar
    ========================================= */
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
 
-/* 居中 */
+/*页面*/
 .main-recuperar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* 开启弹性布局  */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中*/
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-/* 找回密码的方框  */
+/*找回密码的表单方框*/
 .caixa-recuperar {
     background-color: #ffffff;
     border: 2px solid #000000;
-    border-radius: 8px;
+    border-radius: 8px; /* 圆角 */
     padding: 25px 40px;
-    width: 450px; /* 稍微宽一点，为了装下验证码按钮 */
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+    width: 450px; /* 稍微宽一点，为了完美装下验证码和获取按钮 */
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15); /* 产生立体阴影 */
 }
 
+/* 标题 */
 .caixa-recuperar h2 {
     text-align: center;
     margin-bottom: 5px;
-    text-transform: uppercase;
+    text-transform: uppercase; /* 全部大写字母*/
 }
 
+/* 描述性副标题 */
 .subtitulo {
     text-align: center;
     font-size: 13px;
     color: #555;
     margin-bottom: 20px;
-    border-bottom: 2px solid rgb(129, 199, 249);
+    border-bottom: 2px solid rgb(129, 199, 249); /* 蓝色分隔线 */
     padding-bottom: 10px;
 }
 
-/* 输入框组排版*/
+/* 输入框组排版 */
 .grupo-input {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* 每一组输入区之间的间距 */
     text-align: left;
 }
 
+/* 文本标签*/
 .grupo-input label {
-    display: block;
+    display: block; /* 独占一行 */
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 13px;
 }
 
-/* 输入框样式 */
+/* 统一设置普通文本、邮箱、密码输入框的样式 */
 .grupo-input input[type="text"],
 .grupo-input input[type="email"],
 .grupo-input input[type="password"] {
@@ -57,33 +63,34 @@
     padding: 10px;
     border: 2px solid #000000;
     border-radius: 4px;
-    font-family: inherit;
+    font-family: inherit; /* 继承字体 */
     font-size: 14px;
     background-color: #f9f9f9;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 确保 padding 不破坏 100% 宽度 */
 }
 
+/* 输入框聚焦效果 */
 .grupo-input input:focus {
-    outline: none;
-    border-color: rgb(129, 199, 249);
+    outline: none; /* 移除浏览器默认蓝框 */
+    border-color: rgb(129, 199, 249); /* 换成主题蓝色 */
     background-color: #fff;
 }
 
-/* 验证码行的特殊 Flexbox 排版 */
+/*验证码行的特殊排版*/
 .linha-codigo {
-    display: flex; /* 弹性布局 */
-    gap: 10px; /* 间距 */
+    display: flex; /* 开启弹性布局让输入框和按钮并排 */
+    gap: 10px; /* 它们之间的间距 */
 }
 
-/* 验证码输入框占据剩余空间 */
+/* 验证码输入框占据剩余的所有空间 */
 .linha-codigo input {
-    flex: 1; 
+    flex: 1; /* 自动弹开填满空间 */
 }
 
-/* 获取验证码的按钮 */
+/* 获取验证码的专属小按钮 */
 .btn-codigo {
     padding: 0 15px;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* 默认灰色背景 */
     border: 2px solid #000;
     border-radius: 4px;
     font-weight: bold;
@@ -93,7 +100,7 @@
 }
 
 .btn-codigo:hover {
-    background-color: rgb(129, 199, 249);
+    background-color: rgb(129, 199, 249); /* 悬停变蓝 */
     color: #000;
 }
 
@@ -103,6 +110,7 @@
     text-align: center;
 }
 
+/* 主操作按钮  */
 .btn-acao {
     width: 100%;
     padding: 12px;
@@ -117,6 +125,6 @@
 }
 
 .btn-acao:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000000; /* 悬停背景变黑 */
+    color: #ffffff; /* 文字变白 */
 }

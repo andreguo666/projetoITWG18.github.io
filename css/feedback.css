@@ -1,79 +1,85 @@
 /* =========================================
    feedback
    ========================================= */
-
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
 /*居中*/
 .main-feedback {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;/* 开启弹性布局 */
+    justify-content: center;/* 水平居中*/
+    align-items: center;/* 垂直居中*/
 }
 
 /* 反馈小方框*/
 .caixa-feedback {
-    background-color: #ffffff;/* 反馈小方框*/
+    background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;
-    padding: 30px 40px;
-    width: 450px;
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+    padding: 30px 40px;/* 框内上下留 30px，左右留 40px 空间 */
+    width: 450px;/* 限制反馈框的宽度 */
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);/* 阴影产生立体感 */
 }
+
 
 .caixa-feedback h2 {
     text-align: center;
     margin-bottom: 5px;
-    text-transform: uppercase;
+    text-transform: uppercase;/* 全部大写字母 */
 }
 
+/* 副标题说明文字*/
 .subtitulo {
     text-align: center;
     font-size: 13px;
     color: #555;
     margin-bottom: 20px;
-    border-bottom: 2px solid rgb(129, 199, 249);
+    border-bottom: 2px solid rgb(129, 199, 249);/* 蓝色分隔线 */
     padding-bottom: 10px;
 }
 
 /* 输入框*/
 .grupo-input {
-    margin-bottom: 20px;
+    margin-bottom: 20px;/* 每个输入组之间的间距 */
     text-align: left;
 }
-
+/* 文本标签  */
 .grupo-input label {
-    display: block;
+    display: block;/* 让标签独占一行，不会和输入框挤在一起 */
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 14px;
 }
 
 
+/* 统一设置单行输入框 和多行文本框的样式 */
 .grupo-input input,
 .grupo-input textarea {
-    width: 100%;
+    width: 100%; /* 填满宽度 */
     padding: 10px;
     border: 2px solid #000000;
     border-radius: 4px;
-    font-family: inherit;
+    font-family: inherit; /* 继承全局设置 */
     font-size: 15px;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
+    background-color: #f9f9f9; /* 极其浅的灰色背景 */
+    box-sizing: border-box; /* 确保 padding 不会撑破 100% 的宽度 */
 }
 
-
+/* 专门针对多行文本框的设置 */
 .grupo-input textarea {
-    resize: vertical; 
+    resize: vertical; /* 只允许用户上下拖拽改变高度，禁止左右拖拽破坏排版 (Redimensionamento apenas vertical) */
 }
 
-
+/*互动特效*/
+/* 当用户鼠标点击/聚焦到输入框时的效果*/
 .grupo-input input:focus,
 .grupo-input textarea:focus {
-    outline: none;
-    border-color: rgb(129, 199, 249);
-    background-color: #fff;
+    outline: none; /* 去掉浏览器自带的难看蓝色高亮边框 */
+    border-color: rgb(129, 199, 249); /* 换成我们游戏专属的蓝色边框 */
+    background-color: #fff; /* 背景变回纯白，提示用户正在输入 */
 }
 
-
+/*底部发送按钮区域 */
 .acoes-feedback {
     text-align: center;
     margin-top: 10px;
@@ -87,11 +93,12 @@
     color: #000000;
     background-color: rgb(129, 199, 249);
     border: 2px solid #000000;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    cursor: pointer; /* 鼠标放上去变成小手图标*/
+    transition: all 0.3s ease; /* 颜色切换的平滑过渡动画*/
     text-transform: uppercase;
 }
 
+/* 按钮悬停效果*/
 .btn-acao:hover {
     background-color: #000000;
     color: #ffffff;

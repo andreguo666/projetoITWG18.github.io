@@ -2,32 +2,38 @@
 这个css是给所有global，基本算是通用吧，包含了背景 头部 footer还有框架按钮
 （este é para background head footer e butoes)
    ========================================= */
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
 
+/*全局重置*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;/* 清除浏览器默认的外边距*/
+    padding: 0;/* 清除默认的内边距*/
+    box-sizing: border-box;/* 用来确保 padding 不会撑破设定好的宽度和高度*/
 }
 
+/*网页主体*/
 body {
-    background-image: url(../imagens/backgroundglobal.gif);
-    background-size: 100%;
+    background-image: url(../imagens/backgroundglobal.gif);/* 背景动图 */
+    background-size: 100%;/* 填满屏幕宽度 */
     color: #000000;
-    font-family: "Courier New", Courier, monospace;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: "Courier New", Courier, monospace;/* 字体 */
+    min-height: 100vh;/* 确保网页至少有 100% 的屏幕高度 */
+    display: flex;/* 弹性布局*/
+    flex-direction: column;/* 让 header、main、footer 从上到下垂直排列*/
 }
 
+/*头部Cabeçalho*/
 header {
     width: 100%;
     height: 100px;
-    background-color: rgba(129, 199, 249, 0.5);
+    background-color: rgba(129, 199, 249, 0.5);/* rgba 里的 0.5 代表 50% 半透明度*/
     border-bottom: 2px solid #000000;
-    display: flex; /* 排版*/
-    align-items: center;
+    display: flex; /* 让里面的文字和 Logo 横向对齐 */
+    align-items: center;/* 垂直居中对齐*/
     padding: 0;
-    overflow: hidden;
+    overflow: hidden;/* 如果里面的东西超出 100px 高度，就隐藏掉 */
 }
 
 header h1 {
@@ -35,28 +41,31 @@ header h1 {
     font-size: 40px;
 }
 
+/* 主要内容区 / 粉色大框*/
 main {
     /*老师要求的固定尺寸*/
-    width: 90%;
-    max-width: 800px;
+    width: 90%;/* 平时占屏幕 90% */
+    max-width: 800px;/* 但最宽不超过 800px，适配电脑和手机 */
 
-    height:auto; 
+    height:auto; /* 高度根据内容自动伸缩 */
     max-height: 700px;
     
     /* 居中*/
-    margin: 40px auto;
-    position: relative;
+    margin: 40px auto;/* auto 会让这个大框在网页正中间水平居中*/
+    position: relative;/* 让后面的 absolute（绝对定位）比如返回按钮和角落图片，能以这个框为基准来定位 */
     
-    overflow-y: hidden; 
+    overflow-y: hidden; /* 确保四个角的图片或者内容不会超出圆角的范围 */
     overflow-x: hidden;
     
-    background-color: rgba(248, 230, 230, 0.85);
-    padding: 50px 40px;
+    /*外观*/
+    background-color: rgba(248, 230, 230, 0.85);/* 稍微偏粉白色的半透明底 */
+    padding: 50px 40px;/* 框内留白 */
     border: 3px solid #000000;
-    border-radius: 12px;
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;/* 圆角*/
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);/* 阴影*/
 }
 
+/* 5. 页脚 (Rodapé) */
 footer {
     text-align: center;
     padding: 20px;
@@ -66,30 +75,31 @@ footer {
     font-weight: bold;
     border-top: 2px solid #000000;
     width: 100%;
-    margin-top: auto;
+    margin-top: auto;/* 配合 body 的 flex 布局，能把 footer 永远推到屏幕最底部*/
 }
 
 /*这下面是基本通用的组件 */
 
 .menu-container {
     display: flex;
-    flex-direction: column; 
-    gap: 25px;
-    justify-content: center;
+    flex-direction: column; /* 按钮从上到下排列 */
+    gap: 25px;/* 按钮之间的缝隙 */
+    justify-content: center;/* 按钮整体在框内垂直居中 */
     min-height: 400px;
 }
 
+/* 单个菜单按钮*/
 .menu-btn {
     display: block;
-    text-decoration: none;
+    text-decoration: none;/* 去掉超链接自带的下划线 */
     color: #000000;
     font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: uppercase;/* 自动把字母全部变大写 */
     padding: 12px 20px;
     border: 2px solid #000000; 
     background-color: #ffffff;
-    transition: all 0.3s ease; /* 放大的动画 */
+    transition: all 0.3s ease; /* 让鼠标放上去的变色动画有 0.3 秒的平滑过渡*/
 }
 
 .menu-btn:hover {
@@ -98,9 +108,9 @@ footer {
 }
 
 .btn-voltar {
-    position: absolute; /* 返回按钮定位*/
-    top: 15px;
-    right: 15px;
+    position: absolute; /* 绝对定位：随心所欲放置*/
+    top: 15px;/* 贴紧 main 框的顶部 */
+    right: 15px;/* 贴紧 main 框的右侧 */
     text-decoration: none;
     color: #000000;
     font-weight: bold;
@@ -125,68 +135,5 @@ footer {
     text-transform: uppercase;
     color: #000000;
 
-    text-shadow: 2px 2px 0px rgba(129, 199, 249, 0.5); 
-}
-
-
-/* =========================================
-  角落图片样式
-   ========================================= */
-
-main {
-    position: relative;
-    overflow: hidden; 
-}
-
-
-.main-corners {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-
-    z-index: 10; 
-}
-
-/*通用角落样式 */
-.main-corners .corner {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-
-
-
-
-.main-corners .top-left {
-    top: -90px;
-    left: -90px; 
-    background-image: url(flowers/flower_blue_sway.gif);
-}
-
-/* 右上角 */
-.main-corners .top-right {
-    top: -90px;
-    right: -90px; 
-    background-image: url(flowers/flower_mix_sway.gif);
-}
-
-/* 左下角 */
-.main-corners .bottom-left {
-    bottom: -90px;
-    left: -90px;
-    background-image: url(../flowers/flower_red_sway.gif);
-}
-
-/* 右下角 */
-.main-corners .bottom-right {
-    bottom: -90px;
-    right: -90px;
-    background-image: url(flowers/flower_swaypink.gif);
+    text-shadow: 2px 2px 0px rgba(129, 199, 249, 0.5); /* 文字右下角的蓝色立体阴影*/
 }

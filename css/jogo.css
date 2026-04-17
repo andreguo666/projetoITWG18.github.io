@@ -2,67 +2,73 @@
 游戏
 这个不是最终品 只是先看看怎么一回事
    ========================================= */
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
 
+/*游戏背景*/
 .fundo-jogo {
-
-    background-image: url('../imagens/background2.gif');
-    background-size: 100%;
-    background-color: #1a1a2e;
-    background-size: cover;
-    background-position: center;
+    background-image: url('../imagens/background2.gif'); /* 动态背景 */
+    background-color: #1a1a2e; /* 如果图片加载慢，先显示深蓝色底色 */
+    background-size: cover; /*让背景图等比例缩放，完全填满整个屏幕*/
+    background-position: center; /* 背景图居中对齐*/
 }
 
-
+/*战场整体排版*/
 .area-batalha {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
+    display: flex; /*让左边计分板和右边棋盘并排横向显示 */
+    justify-content: center; /* 整体水平居中 */
+    align-items: flex-start; /* 顶部对齐：防止计分板被错误拉伸  */
+    gap: 40px; /* 计分板和棋盘之间留出 40px 的距离 */
     margin-top: 50px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1000px; /* 限制最大宽度，防止在大屏幕上散得太开 */
 }
 
-/*计分板*/
+/*左侧计分板 */
 .painel-lateral {
-    width: 250px;
+    width: 250px; /* 固定计分板宽度 */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 让分数、段位、按钮等从上到下垂直排列*/
     gap: 20px;
 }
 
+/* 计分板里的每一个白色数据框*/
 .caixa-status {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* 90% 不透明度的纯白底色 */
     border: 3px solid #000;
-    border-radius: 8px;
+    border-radius: 8px; /* 圆角 */
     padding: 15px;
     text-align: center;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.5); /* 产生阴影 */
 }
 
 .caixa-status h3 {
     font-size: 16px;
     color: #555;
     margin-bottom: 5px;
-    border-bottom: 2px solid rgb(129, 199, 249);
+    border-bottom: 2px solid rgb(129, 199, 249); /* 蓝色下划线分隔 */
     padding-bottom: 5px;
 }
 
+/* 巨大的分数数字 */
 .numero-grande {
     font-size: 32px;
     font-weight: bold;
     color: #000;
 }
 
+/* 段位文字 */
 .texto-rank {
     font-size: 24px;
     font-weight: bold;
-    color: #b0c4de;
+    color: #b0c4de; /* 银蓝色的黑铁质感 */
 }
 
+/* 退出游戏按钮*/
 .btn-sair {
     text-align: center;
-    background-color: #ff4c4c;
+    background-color: #ff4c4c; /* 醒目的红色*/
     color: white;
     padding: 12px;
     font-size: 18px;
@@ -74,85 +80,155 @@
 }
 
 .btn-sair:hover {
-    background-color: #000;
+    background-color: #000; /* 悬停变黑，红色文字*/
     color: #ff4c4c;
 }
 
-/*游戏棋盘*/
+/*右侧游戏棋盘*/
+
+/* 棋盘外面的半透明底座*/
 .tabuleiro-container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* 60% 不透明的黑色底板*/
     padding: 15px;
-    border: 4px solid #fff;
+    border: 4px solid #fff; /* 白色实心边框 */
     border-radius: 12px;
     box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
 }
 
-/*Grid 制作 8x8 网格 */
+/*8x8 网格布局*/
 .tabuleiro {
-    display: grid;
-    grid-template-columns: repeat(8, 55px); 
-    grid-template-rows: repeat(8, 55px);
-    gap: 5px;
+    display: grid; /* 开启网格 */
+    grid-template-columns: repeat(8, 55px); /* 切割成 8 列，每列 55px 宽 */
+    grid-template-rows: repeat(8, 55px); /* 切割成 8 行，每行 55px 高 */
+    gap: 5px; /* 格子之间的缝隙 */
 }
 
+/* 单个宝石/植物的通用基底样式*/
 .gema {
     width: 100%;
     height: 100%;
-    background-color: #ccc;
+    background-color: #ccc; /* 默认灰色占位符颜色 */
     border-radius: 8px;
-    border: 2px solid rgba(255,255,255,0.3);
-    cursor: pointer;
+    border: 2px solid rgba(255,255,255,0.3); /* 淡淡的半透明白边 */
+    cursor: pointer; /* 鼠标放上去变小手 */
     background-size: cover;
     background-position: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* 放大效果的微小过渡动画 */
 }
 
 .gema:hover {
-    transform: scale(1.1);
-    border-color: #fff;
+    transform: scale(1.1); /* 鼠标放上去默认微小放大 */
+    border-color: #fff; /* 边框变亮 */
 }
 
-/* 下面来设定宝石的样子，就跟我们上周说的一样 鼠标放上去动起来的gif和jpg */
+/*不同种类植物的专属图片与动图特效 */
+/*默认显示 PNG 静态图，鼠标悬停 (:hover) 时切换为 GIF 动图并放大 */
 
+/* 类型 1：蓝花 (Flor Azul)*/
 .tipo-1 {
     background-image: url('../flowers/flowerblue1.png'); 
-    background-color: transparent;
+    background-color: transparent; /* 去掉灰色底，露出下面的黑板 */
 }
 .tipo-1:hover {
     background-image: url('../flowers/flower_blue_sway.gif');
-    background-size:100px 100px;
+    background-size: 100px 100px; /* 悬停时强制改变背景图尺寸产生特效 */
 }
 
+/* 类型 2：黄花 (Flor Amarela) */
 .tipo-2 {
     background-image: url('../flowers/floweryellow1.png');
     background-color: transparent;
 }
 .tipo-2:hover {
     background-image: url('../flowers/flower_yellow_sway.gif');
-    background-size:100px 100px;
+    background-size: 100px 100px;
 }
 
+/* 类型 3：粉花 (Flor Rosa) */
 .tipo-3 {
     background-image: url('../flowers/flowerpink1.png');
     background-color: transparent;
 }
 .tipo-3:hover {
     background-image: url('../flowers/flower_swaypink.gif');
-    background-size:100px 100px;
+    background-size: 100px 100px;
 }
 
-.tipo-4 { background-image: url('../flowers/flowerred1.png');
+/* 类型 4：红花 (Flor Vermelha) */
+.tipo-4 {
+    background-image: url('../flowers/flowerred1.png');
     background-color: transparent;
 }
 .tipo-4:hover { 
     background-image: url('../flowers/flower_red_sway.gif');
-    background-size:100px 100px;
+    background-size: 100px 100px;
 }
 
-.tipo-5 { background-image: url('../flowers/flowerwhite1.png');
+/* 类型 5：白花 (Flor Branca) */
+.tipo-5 {
+    background-image: url('../flowers/flowerwhite1.png');
     background-color: transparent;
 }
 .tipo-5:hover { 
     background-image: url('../flowers/flower_white_sway.gif');
-    background-size:100px 100px;
+    background-size: 100px 100px;
+}
+
+/* =========================================
+  小屏幕适配
+   ========================================= */
+
+/* 当屏幕宽度小于 850px 时，触发以下样式变化*/
+@media (max-width: 850px) {
+    
+    /*大框架：从“左右并排”变成“上下排列” */
+    .area-batalha {
+        flex-direction: column; /* 把横向排列改成垂直的列 */
+        align-items: center; /* 确保计分板和棋盘整体居中对齐 */
+        gap: 20px; /* 缩小它们之间的上下间距 */
+        margin-top: 20px; /* 缩小顶部的留白 */
+    }
+
+    /*计分板移动到上方，并让内部数据横向排列以节省空间 */
+    .painel-lateral {
+        width: 100%; /* 让计分板占满屏幕宽度 */
+        flex-direction: row; /* 计分板里的 分数 段位 按钮改成横向排列*/
+        flex-wrap: wrap; /* 空间不够时允许自动换行 */
+        justify-content: center; /* 居中对齐所有小框 */
+        gap: 10px; /* 小框之间的间距 */
+    }
+
+    /*计分板里的小框调整，让它们在手机上别太大 */
+    .caixa-status {
+        padding: 10px;
+        flex: 1 1 auto; /* 允许小框根据剩余空间自动伸缩 */
+        min-width: 120px; /* 保证框不会被压缩得太小看不清字 */
+    }
+
+    .numero-grande {
+        font-size: 24px; /* 手机上数字稍微改小一点 */
+    }
+    
+    .texto-rank {
+        font-size: 18px; /* 手机上段位字体改小 */
+    }
+
+    .btn-sair {
+        width: 100%; /* 让退出按钮在手机上占满一整行*/
+        margin-top: 10px;
+    }
+
+    /*游戏棋盘稍微缩小宝石尺寸，确保 8x8 不会超出手机屏幕边界 */
+    .tabuleiro {
+        /* 原本是 55px，现在缩小到 11vw（视口宽度的11%） */
+        grid-template-columns: repeat(8, 11vw); 
+        grid-template-rows: repeat(8, 11vw);
+        max-width: 95vw; /* 限制最大宽度，两边留一点点缝隙好看 */
+        gap: 3px; 
+    }
+    
+    /* 调整棋盘背景框的内边距 */
+    .tabuleiro-container {
+        padding: 10px; 
+    }
 }

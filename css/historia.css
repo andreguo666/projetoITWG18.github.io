@@ -1,14 +1,18 @@
 /* =========================================
  这个是给historia那一页的
    ========================================= */
-
+    /*Grupo: 18, Número: 66567, Nome: Tiago Sun, PL: 21
+      Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
+      Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21*/
+/* 历史文本的主容器*/
 .texto-historia {
-    text-align: justify;
-    line-height: 1.6;
-    font-size: 16px;
-    margin-top: 30px;
+    text-align: justify; /* 两端对齐：让文字像报纸一样，左右两边都很平齐，长文章阅读体验更好*/
+    line-height: 1.6; /* 行高：设置为 1.6 倍，防止文字上下挤在一起，看起来不累*/
+    font-size: 16px; /* 字体大小*/
+    margin-top: 30px; /* 顶部外边距：和页面顶部的标题拉开 30px空间*/
 }
 
+/* 历史文本里的每一个独立段落 */
 .texto-historia p {
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* 段落底边距：每写完一段，下面自动空出 10px，形成自然的段落分隔*/
 }
