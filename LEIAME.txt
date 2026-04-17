@@ -1,0 +1,9 @@
+Número: 66567, Nome: Tiago Sun- 33.33%
+Fez o parte do index, criou idea e fez o global.css, fez o parte do tabuleira do jogo e tambem o pouco parte de ranking
+
+Número: 66585, Nome: Lecheng Guo- 33.33%
+Fez o parte de login, sign up, e recuperar password
+
+Número: 66565, Nome: Xiaoqi Liu- 33.33%
+Fez o parte de informacoes, historia ,regras, feedback, e reuna os materiais(tipo video, imagens,tipo dos gemas)
+
