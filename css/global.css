@@ -8,7 +8,7 @@
 
 /*全局重置*/
 * {
-    margin: 0;/* 清除浏览器默认的外边距*/
+    margin: 0;/*清理默认的外边距*/
     padding: 0;/* 清除默认的内边距*/
     box-sizing: border-box;/* 用来确保 padding 不会撑破设定好的宽度和高度*/
 }
@@ -54,7 +54,7 @@ main {
     margin: 40px auto;/* auto 会让这个大框在网页正中间水平居中*/
     position: relative;/* 让后面的 absolute（绝对定位）比如返回按钮和角落图片，能以这个框为基准来定位 */
     
-    overflow-y: hidden; /* 确保四个角的图片或者内容不会超出圆角的范围 */
+    overflow-y: hidden; /* 确保四个角的图片或者内容不会超出圆角的范围 废弃中 */
     overflow-x: hidden;
     
     /*外观*/
@@ -72,7 +72,7 @@ footer {
     background-color: rgba(129, 199, 249, 0.5);
     height: 10px;
     color: #000000;
-    font-weight: bold;
+    font-weight: bold;/*粗体*/
     border-top: 2px solid #000000;
     width: 100%;
     margin-top: auto;/* 配合 body 的 flex 布局，能把 footer 永远推到屏幕最底部*/
