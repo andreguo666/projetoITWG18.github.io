@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
     //几种宝石
     const tiposDeGemas = 5;
 
+  
+//加入shuffle按钮
+function gerarTabuleiro() {
+    // 先清空棋盘
+    tabuleiro.innerHTML = "";
     //循环 (Ciclo for)自动重复 64 次
     for (let i = 0; i < totalGemas; i++) {
         
@@ -35,6 +40,45 @@ document.addEventListener("DOMContentLoaded", function() {
         // 把新 div，塞进网页的空盒里
         tabuleiro.appendChild(novaGema);
     }
-
     console.log("Tabuleiro gerado com sucesso!");
+}
+
+gerarTabuleiro();
+
+
+    // 计时器
+
+    let tempo = 60;
+
+    const timer = document.getElementById("timer");
+
+    const countdown = setInterval(function () {
+
+        tempo--;
+
+        timer.textContent = tempo;
+
+        // 最后10秒变红
+        if (tempo <= 10) {
+            timer.style.color = "red";
+        }
+
+        // 时间结束
+        if (tempo <= 0) {
+
+            clearInterval(countdown);
+
+            alert("Fim do jogo!");
+
+        }
+
+    }, 1000);
+
+    const botaoShuffle =
+        document.getElementById("btn-shuffle");
+
+botaoShuffle.addEventListener("click", function () {
+    gerarTabuleiro();
+});
+
 });
