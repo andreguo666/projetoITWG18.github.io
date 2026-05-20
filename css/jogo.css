@@ -235,3 +235,19 @@
         padding: 10px; 
     }
 }
+
+
+
+/* 选中的宝石发光或放大 */
+.gema.selecionada {
+    border: 3px solid #ffcc00; 
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffcc00;
+    z-index: 10;
+}
+
+/* 消除后的空状态 */
+.gema.vazia {
+    background: transparent;
+    border: none;
+}
