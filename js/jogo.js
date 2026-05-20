@@ -165,6 +165,30 @@ document.addEventListener("DOMContentLoaded", function() {
     btnReiniciar.addEventListener("click", function() {
         reiniciarJogoCompleto(btnComecar, btnReiniciar);
     });
+    const btnEmbaralhar = document.getElementById("btn-embaralhar");//刷新功能
+    btnEmbaralhar.addEventListener("click", function() {
+        // 如果棋盘被锁定了（游戏还没开始、游戏已经结束、或者宝石正在掉落动画中），绝对不准洗牌
+        if (bloqueado) {
+            return; 
+        }
+        // 2. 检查余额 (Verificar Saldo)：玩家的分数够不够 10 分？
+        if (pontuacaoAtual >= 10) {
+            // A. 扣除 10 分
+            pontuacaoAtual -= 10;
+            // B. 强行更新网页上的分数显示
+            document.getElementById("pontuacao-jogo").innerText = pontuacaoAtual;
+            // C. 直接初始化函数
+            // 因为 iniciarJogo() 本来就包含了“随机生成”和“防连消检查”
+            iniciarJogo();
+            // 取消之前可能遗留的选中状态
+            linhaSelecionada = -1;
+            colunaSelecionada = -1;
+            console.log("refresh！menos 10 ponto,agora: " + pontuacaoAtual);
+        } else {
+            // 如果分数不够，弹出一个浏览器警告框
+            alert("❌ Pontos insuficientes! Precisas de pelo menos 10 pontos para embaralhar.");
+        }
+    });
 });
 
 //计时器
