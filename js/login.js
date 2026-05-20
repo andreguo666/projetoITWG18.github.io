@@ -2,40 +2,38 @@
 // Grupo: 18, Número: 66585, Nome: Lecheng Guo, PL: 21
 // Grupo: 18, Número: 66565, Nome: Xiaoqi Liu, PL: 21
 
-const loginForm=document.getElementById("caixa-login");
-const message=document.getElementById("message");
+const loginForm = document.getElementById("loginForm");
+const message = document.getElementById("message");
 
-function getPlayers(){
-    return JSON.parse(localStorage.getItem("players"))||[];
+function getPlayers() {
+    return JSON.parse(localStorage.getItem("players")) || [];
 }
 
-function savePlayers(){
-    localStorage.setItem("players",JSON.stringify(players));
-}
-
-loginForm.addEventListener("submit", fuction(event))
-{
+loginForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const username=document.getElementById("username").value.toLowerCase();
-    const password=document.getElementById("password").value;
-    const players=getPlayers();
-    const player=players.find(function(p){
-        return p.username===username && p.password===password;
-    });
-    if (player){
-        const loggedPlayer={
-            username:player.username,
+    const username = document.getElementById("username").value.trim().toLowerCase();
+    const password = document.getElementById("password").value.trim();
 
-        };
-        localStorage.setItem("loggedPlayer",JSON.stringify(loggedPlayer));
-        message.textContent="logging you in"
-        console.log("jogador authenticado:",loggedPlayer);
-        window.location.href('jogo.html');
-    }else{
-        message.textContent="Email ou palavrapasse errado"
-        window.location.href('login.html');
+    const players = getPlayers();
+
+    console.log("Username escrito:", username);
+    console.log("Password escrita:", password);
+    console.log("Players guardados:", players);
+
+    const player = players.find(function(p) {
+        return p.username === username && p.password === password;
+    });
+
+    console.log("Player encontrado:", player);
+
+    if (player) {
+        localStorage.setItem("loggedPlayer", JSON.stringify(player));
+        window.location.href = "escolhermodo.html";
+    } else {
+        message.textContent = "Username ou palavra-passe incorretos.";
+        localStorage.removeItem("loggedPlayer");
     }
+
     loginForm.reset();
-    
-};
+});

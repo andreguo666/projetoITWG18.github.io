@@ -21,7 +21,7 @@
         
         <a href="index.html" class="btn-voltar">Voltar</a>
 
-        <form class="caixa-login" action="js/login.js" method="POST">
+        <form id="loginForm" class="caixa-login">
             <h2>Login</h2>
 
             <div class="grupo-input">
@@ -32,14 +32,14 @@
             <div class="grupo-input">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
-                <button id="VERPASSWORD" onclick="togglePassword()"></button>
+                <button type="button"  id="VERPASSWORD" onclick="togglePassword()"></button>
             </div>
 
             <div class="acoes-login">
                 <a href="recuperar.html" class="link-esqueceu">Forgot Password?</a>
                 
                 <div class="botoes-container">
-                    <a href="escolhermodo.html" class="btn-acao">Log In</a>
+                    <button type="submit" class="btn-acao">Log In</button>
                 </div>
             </div>
         </form>
@@ -58,5 +58,6 @@
     </button>
     <audio id="musica-fundo" src="video_e_musica/background_music.mp3" autoplay loop preload="auto"></audio>
     <script src="js/musica.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

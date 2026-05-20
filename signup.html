@@ -21,7 +21,7 @@
         
         <a href="index.html" class="btn-voltar">Voltar</a>
 
-        <form class="caixa-signup" action="js/signup.js" method="POST" enctype="multipart/form-data">
+        <form id="caixa-signup" class="caixa-signup"  enctype="multipart/form-data">
             <h2>Sign Up</h2>
 
             <div class="grupo-input">
@@ -36,7 +36,7 @@
 
             <div class="grupo-input">
                 <label for="avatar">Profile Picture</label>
-                <input type="file" id="avatar" name="avatar" accept="image/*" class="input-ficheiro" required>
+                <input type="file" id="avatar" name="avatar" accept="image/*" class="input-ficheiro">
             </div>
 
             <div class="grupo-input">
@@ -64,6 +64,8 @@
     </footer>
     <audio src="video_e_musica/background_music.mp3" autoplay loop preload="auto"></audio>
 
-<script src="js/footer.js"></script>
+    <script src="js/footer.js"></script>
+    <p id="message"></p>
+<script src="js/signup.js"></script>
 </body>
 </html>
