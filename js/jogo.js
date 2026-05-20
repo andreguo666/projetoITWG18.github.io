@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //计时器
 function iniciarTemporizador() {
-    let tempo = 10; 
+    let tempo = 60; 
     const timer = document.getElementById("timer");
 // setInterval 会每隔 1000 毫秒（1秒）执行一次大括号里的代码
     const countdown = setInterval(function () {
