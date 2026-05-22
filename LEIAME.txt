@@ -1,9 +1,35 @@
+grupo 18
+
+Requisitos e Funcionalidades
+Funcionalidades Essenciais :
+- Geração dinâmica do tabuleiro sem matches iniciais.
+- Mecânica de seleção e troca de gemas adjacentes.
+- Identificação e eliminação de matches de 3 ou mais gemas.
+- Sistema de gravidade e preenchimento de novas gemas.
+- Cálculo de pontuação usando a fórmula: 10 * (n - 2).
+- Temporizador de 60 segundos com bloqueio do tabuleiro no final
+
+Funcionalidades Avançadas:
+- Reação em cadeia.
+- O jogo avisa quando não há mais movimentos possíveis.
+- Power-up de Embaralhar: Botão que consome 10 pontos para renovar o tabuleiro.
+- Tabela de Classificação Ranking: Armazenamento de dados do utilizador utilizando LocalStorage, com ordenação automática (利用本地存储实现的动态排行榜).
+
+Melhorias face à Etapa 1
+ouvimos feedback e ja pomos tipo de letra,tirou os codigo important e tambem pomos se quanto audio e video nao funciona um frase,tambem ja tirou width="100%" no html parte video e pomos no css
+
+Contribuições do Grupo
 Número: 66567, Nome: Tiago Sun- 33.33%
 Fez o parte do index, fez o global.css, fez o parte do tabuleira do jogo e tambem um pouco parte de ranking e um ajudou parte login
+fez parte jogo juntos e ranking
 
 Número: 66585, Nome: Lecheng Guo- 33.33%
 Fez o parte de login, sign up, e recuperar password
+fez parte login e sign up
 
 Número: 66565, Nome: Xiaoqi Liu- 33.33%
 Fez o parte de informacoes, historia ,regras, feedback, e reuna os materiais(tipo video, imagens,tipo dos gemas)
+fez parte jogo juntos
 
+Instruções de Execução
+para nos funciona bem, mas para nao haver problema de localStorage recomenda-se fortemente a utilização da extensão "Live Server" no VS Code
