@@ -51,18 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
     btnComecar.addEventListener("click", function() {
 
         bloqueado = false;
-
         btnComecar.disabled = true;
-
         btnComecar.style.opacity = "0.5";
-
         btnComecar.innerText = "Relaxando...";
-
         btnComecar.style.cursor = "not-allowed";
 
     });
-
-
 
 
 
@@ -77,12 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         iniciarJogo();
-
         linhaSelecionada = -1;
         colunaSelecionada = -1;
-
         console.log("🌸 Zen Shuffle!");
-
     });
 });
 
@@ -95,15 +86,11 @@ function iniciarJogo() {
     for (let l = 0; l < linhas; l++) {
 
         matriz[l] = [];
-
         for (let c = 0; c < colunas; c++) {
-
             let tipoAleatorio;
-
             let temMatch;
 
             do {
-
                 tipoAleatorio =
                     Math.floor(Math.random() * tiposDeGemas) + 1;
 
@@ -142,7 +129,6 @@ function desenharTabuleiro() {
     tabuleiro.innerHTML = "";
 
     for (let l = 0; l < linhas; l++) {
-
         for (let c = 0; c < colunas; c++) {
 
             const novaGema =
@@ -282,7 +268,6 @@ function encontrarMatches() {
     // Horizontal
 
     for (let l = 0; l < linhas; l++) {
-
         for (let c = 0; c < colunas - 2; c++) {
 
             let tipo = matriz[l][c];

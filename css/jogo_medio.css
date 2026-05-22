@@ -64,6 +64,7 @@
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
+
     text-decoration: none;
     border: 3px solid #000;
     border-radius: 8px;
@@ -89,8 +90,8 @@
 /*8x8 网格布局*/
 .tabuleiro {
     display: grid; /* 开启网格 */
-    grid-template-columns: repeat(9, 55px); /* 切割成 8 列，每列 55px 宽 */
-    grid-template-rows: repeat(9, 55px); /* 切割成 8 行，每行 55px 高 */
+    grid-template-columns: repeat(9, 55px); /* 切割成 9 列，每列 55px 宽 */
+    grid-template-rows: repeat(9, 55px); /* 切割成 9 行，每行 55px 高 */
     gap: 5px; /* 格子之间的缝隙 */
 }
 
@@ -214,8 +215,8 @@
     /*游戏棋盘稍微缩小宝石尺寸，确保 8x8 不会超出手机屏幕边界 */
     .tabuleiro {
         /* 原本是 55px，现在缩小到 11vw（视口宽度的11%） */
-        grid-template-columns: repeat(8, 11vw); 
-        grid-template-rows: repeat(8, 11vw);
+        grid-template-columns: repeat(9, 11vw); 
+        grid-template-rows: repeat(9, 11vw);
         max-width: 95vw; /* 限制最大宽度，两边留一点点缝隙好看 */
         gap: 3px; 
     }
