@@ -13,7 +13,7 @@ Funcionalidades Avançadas:
 - Reação em cadeia.
 - O jogo avisa quando não há mais movimentos possíveis.
 - Power-up de Embaralhar: Botão que consome 10 pontos para renovar o tabuleiro.
-- Tabela de Classificação Ranking: Armazenamento de dados do utilizador utilizando LocalStorage, com ordenação automática (利用本地存储实现的动态排行榜).
+- Tabela de Classificação Ranking: Armazenamento de dados do utilizador utilizando LocalStorage, com ordenação automática
 
 Melhorias face à Etapa 1
 ouvimos feedback e ja pomos tipo de letra,tirou os codigo important e tambem pomos se quanto audio e video nao funciona um frase,tambem ja tirou width="100%" no html parte video e pomos no css
