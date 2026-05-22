@@ -337,7 +337,32 @@ function aplicarGravidade() {
         if (novosMatches.length > 0) {
             processarEliminacao(novosMatches); // 递归调用：再消一次
         } else {
-            bloqueado = false; //没有任何可以消除的了，彻底解锁棋盘！
+            bloqueado = false; // 没有任何可以消除的了，彻底解锁棋盘！
+            
+            // 获取当前剩余时间，确保游戏还没结束才去提醒
+            const tempoAtual = parseInt(document.getElementById("timer").innerText);
+            
+            if (tempoAtual > 0) {
+                let temJogada = verificarMovimentosPossiveis();
+                
+                // 如果发现没有可用步数了
+                if (!temJogada) {
+                    // 延迟一点点弹窗，避免打断刚刚掉落完成的视觉体验
+                    setTimeout(function() {
+                        alert("⚠️ Fim de linha! Não há mais movimentos possíveis.\nUsa o botão de Embaralhar para continuar.");
+                        
+                        //让洗牌按钮发红光提醒玩家去点它
+                        const btnEmbaralhar = document.getElementById("btn-embaralhar");
+                        btnEmbaralhar.style.boxShadow = "0 0 20px red";
+                        
+                        // 2秒后红光自动消失
+                        setTimeout(function() {
+                            btnEmbaralhar.style.boxShadow = "none";
+                        }, 2000);
+
+                    }, 200);
+                }
+            }
         }
     }, 300);
 }
@@ -409,4 +434,49 @@ function salvarPontuacao(nome, pontuacao) {
 
     // 存回浏览器的仓库里
     localStorage.setItem("rankingNormal", JSON.stringify(rankingNormal));
+}
+
+// 7. 死局检测系统
+function verificarMovimentosPossiveis() {
+    // 遍历整个棋盘
+    for (let l = 0; l < linhas; l++) {
+        for (let c = 0; c < colunas; c++) {
+
+            // A. 尝试和右边的宝石交换
+            if (c < colunas - 1) {
+                // 1. 模拟交换
+                let temp = matriz[l][c];
+                matriz[l][c] = matriz[l][c+1];
+                matriz[l][c+1] = temp;
+
+                // 2. 扫描有没有连消
+                let temMatch = encontrarMatches().length > 0;
+
+                // 3. 无论如何，把数据老老实实换回来！（恢复现场）
+                temp = matriz[l][c];
+                matriz[l][c] = matriz[l][c+1];
+                matriz[l][c+1] = temp;
+
+                // 4. 如果刚刚的交换能产生连消，说明游戏还没死，直接返回 true (有步可走)
+                if (temMatch) return true; 
+            }
+
+            // B. 尝试和下边的宝石交换
+            if (l < linhas - 1) {
+                let temp = matriz[l][c];
+                matriz[l][c] = matriz[l+1][c];
+                matriz[l+1][c] = temp;
+
+                let temMatch = encontrarMatches().length > 0;
+
+                temp = matriz[l][c];
+                matriz[l][c] = matriz[l+1][c];
+                matriz[l+1][c] = temp;
+
+                if (temMatch) return true;
+            }
+        }
+    }
+    // 如果把所有的右边和下边都试过了，还是没有返回 true，那就是彻底死局了！
+    return false;
 }
