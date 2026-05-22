@@ -48,15 +48,24 @@ document.addEventListener("DOMContentLoaded", function() {
        Botão Começar
     ========================================= */
 
-    btnComecar.addEventListener("click", function() {
-
+btnComecar.addEventListener("click", function() {
+    // 第一次点击：开始游戏
+    if (bloqueado === true) {
         bloqueado = false;
-        btnComecar.disabled = true;
-        btnComecar.style.opacity = "0.5";
-        btnComecar.innerText = "Relaxando...";
-        btnComecar.style.cursor = "not-allowed";
+        btnComecar.innerText = "Terminar Jogo";
+        btnComecar.style.backgroundColor = "#000";
+    }
 
-    });
+    // 第二次点击：结束游戏
+    else {
+        bloqueado = true;
+        alert(
+            "🌸 Sessão terminada.\nPontuação final: "
+            + pontuacaoAtual
+        );
+        location.reload();
+    }
+});
 
 
 
