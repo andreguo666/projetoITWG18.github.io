@@ -17,7 +17,7 @@ let colunaSelecionada = -1; //被选中的第一颗宝石的列
 let bloqueado = true;
 let pontuacaoAtual = 0;
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {//mimimi这里就是先让网页加载完毕再进行以下操作
 });
 
 // 1. 游戏初始化函数
@@ -33,7 +33,7 @@ function iniciarJogo() {
             //开启 do...while 循环：先抽一次，如果违规，就一直重抽，直到合格为止
             do {
                 // 随机抽一个种类 (1 到 5)
-                tipoAleatorio = Math.floor(Math.random() * tiposDeGemas) + 1;
+                tipoAleatorio = Math.floor(Math.random() * tiposDeGemas) + 1;//mimimi floor是抹小数点 然后randon随机生成0到1的数字
                 // 检查左边:
                 // 条件：当前必须在第 3 列(索引2)或以后，且左边第一格、左边第二格都和现在抽的颜色一样
                 let matchHorizontal = (c >= 2) && (matriz[l][c-1] === tipoAleatorio) && (matriz[l][c-2] === tipoAleatorio);
@@ -65,7 +65,7 @@ function desenharTabuleiro() {
             if (matriz[l][c] === 0) {
                 novaGema.classList.add("gema", "vazia");
             } else {
-                novaGema.classList.add("gema", "tipo-" + matriz[l][c]);
+                novaGema.classList.add("gema", "tipo-" + matriz[l][c]);//mimimi如果是数字 3，"tipo-" + 3 就会拼接出 tipo-3。于是它就拥有了你在 CSS 里写好的特定颜色和图案。
             }
 
             // 如果这颗宝石刚好是刚才被选中的那一颗，给它加个高亮边框！
@@ -78,17 +78,17 @@ function desenharTabuleiro() {
                 clicarGema(l, c); // 告诉程序我点了哪一行哪一列
             });
 
-            tabuleiro.appendChild(novaGema);
+            tabuleiro.appendChild(novaGema);//mimimi appendChild 是最后也是最关键的一步，它把这颗宝石真正地塞进了网页
         }
     }
 }
 
-// 玩家交互逻辑
+// 玩家交互逻辑 超重要
 function clicarGema(l, c) {
     // 如果棋盘被锁定了（正在处理消除或掉落），无视点击
     if (bloqueado) return;
 
-    if (linhaSelecionada === -1 && colunaSelecionada === -1) {
+    if (linhaSelecionada === -1 && colunaSelecionada === -1) {//mimimi 把坐标 (l, c) 记住，然后呼叫重绘函数，给这颗宝石套上高亮
         linhaSelecionada = l;
         colunaSelecionada = c;
         desenharTabuleiro();
@@ -96,7 +96,7 @@ function clicarGema(l, c) {
     else {
         let distanciaLinha = Math.abs(l - linhaSelecionada);
         let distanciaColuna = Math.abs(c - colunaSelecionada);
-        let ehAdjacente = (distanciaLinha + distanciaColuna === 1);
+        let ehAdjacente = (distanciaLinha + distanciaColuna === 1);//mimimi 如果算出来不等于 1（比如点了对角线，或者点了大老远的一颗），它就会直接跳到最底下的 else，清空记录（变成 -1）
 
         if (ehAdjacente) {
             bloqueado = true; //上锁开始处理动画和逻辑
@@ -142,7 +142,7 @@ function clicarGema(l, c) {
         }
     }
 }
-
+////////////////////////////////////////////////////////////////////////////////////
 //开始游戏
 document.addEventListener("DOMContentLoaded", function() {
     iniciarJogo(); // 依然自动生成棋盘
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 给开始按钮安装点击事件 
     btnComecar.addEventListener("click", function() {
         
-        iniciarTemporizador(); // 点击后，正式启动计时器
+        iniciarTemporizador(); // 点击后，正式启动计时器 函数写在后面
         bloqueado = false;
         //立刻把按钮禁用掉
         btnComecar.disabled = true; 
@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
         btnComecar.innerText = "Em Jogo..."; // 把文字改成“游戏中”
         btnComecar.style.cursor = "not-allowed"; // 鼠标放上去变成禁止符号
     });
+
     btnReiniciar.addEventListener("click", function() {
         reiniciarJogoCompleto(btnComecar, btnReiniciar);
     });
@@ -230,7 +231,7 @@ function iniciarTemporizador() {
 } //用来彻底关闭 iniciarTemporizador 函数
 
 
-/* =========================================
+/* =========================================////////////////////
    消除与重力引擎
    ========================================= */
 
@@ -245,7 +246,7 @@ function encontrarMatches() {
             if (tipo !== 0 && tipo === matriz[l][c+1] && tipo === matriz[l][c+2]) {
                 paraEliminar.push({l: l, c: c});
                 paraEliminar.push({l: l, c: c+1});
-                paraEliminar.push({l: l, c: c+2});
+                paraEliminar.push({l: l, c: c+2});//mimimi 检查当前这颗宝石 (tipo)，是不是和右边第一颗 ([l][c+1]) 且和右边第二颗 ([l][c+2]) 的数字完全一样
             }
         }
     }
