@@ -31,5 +31,9 @@ Número: 66565, Nome: Xiaoqi Liu- 33.33%
 Fez o parte de informacoes, historia ,regras, feedback, e reuna os materiais(tipo video, imagens,tipo dos gemas)
 fez parte jogo juntos
 
+<<<<<<< Updated upstream
 Instruções de Execução
 para nos funciona bem, mas para nao haver problema de localStorage recomenda-se fortemente a utilização da extensão "Live Server" no VS Code
+=======
+tipo de letra nao devia usar important.mensagen nao suporte audio e video, nao usar  no html. queria pasta media
+>>>>>>> Stashed changes

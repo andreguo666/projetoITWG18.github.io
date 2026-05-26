@@ -49,7 +49,7 @@ main {
 
     height:auto; /* 高度根据内容自动伸缩 */
     max-height: 700px;
-    
+    font-family: Arial, Helvetica, sans-serif;
     /* 居中*/
     margin: 40px auto;/* auto 会让这个大框在网页正中间水平居中*/
     position: relative;/* 让后面的 absolute（绝对定位）比如返回按钮和角落图片，能以这个框为基准来定位 */

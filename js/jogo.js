@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (bloqueado) {
             return; 
         }
-        // 2. 检查余额 (Verificar Saldo)：玩家的分数够不够 10 分？
+        // 2. 检查：玩家的分数够不够 10 分？
         if (pontuacaoAtual >= 10) {
             // A. 扣除 10 分
             pontuacaoAtual -= 10;

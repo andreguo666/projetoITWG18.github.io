@@ -78,19 +78,19 @@
 /* 注意：这里使用 !important 是为了强制覆盖上面的线背景色 */
 
 .ouro td {
-    background-color: #fffbeb !important; /* 黄金色底色*/
+    background-color: #fffbeb; /* 黄金色底色*/
     font-weight: bold;
     color: #b45309; 
 }
 
 .prata td {
-    background-color: #f8fafc !important; /* 白银色底色 */
+    background-color: #f8fafc; /* 白银色底色 */
     font-weight: bold;
     color: #475569; 
 }
 
 .bronze td {
-    background-color: #fef2f2 !important; /* 青铜色底色 */
+    background-color: #fef2f2; /* 青铜色底色 */
     font-weight: bold;
     color: #991b1b;
 }

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { nome: "C.Ronaldo", pontuacao: 760 },
             { nome: "Pai natal", pontuacao: 500 }
         ];
-        // 存进去做底子
+        // 存进去做底
         localStorage.setItem("rankingNormal", JSON.stringify(rankingNormal));
     }
 
